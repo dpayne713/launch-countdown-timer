@@ -43,7 +43,7 @@ body {
 .background {
   height: 100vh;
   width: 100vw;
-  background-image: url(./images/bg-stars.svg), url(./images/pattern-hills.svg);
+  background-image: url(images/bg-stars.svg), url(images/pattern-hills.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: top, bottom;
   background-size: auto;
