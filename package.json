@@ -1,0 +1,15 @@
+{
+  "name": "launch-countdown-timer-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sassWatch": "sass --watch src/sass/style.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.0"
+  }
+}
