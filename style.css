@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 :root {
   --grayish-blue: hsl(237, 18%, 59%);
@@ -11,7 +18,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
@@ -25,7 +33,8 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Red Hat Text", sans-serif;
   width: 100vw;
   overflow: hidden;
@@ -45,14 +54,28 @@ body {
     background-size: auto;
   }
 }
+@media screen and (min-width: 1440px) {
+  .background {
+    background-size: contain;
+  }
+}
 
 .body {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 13.2rem 2rem 13.2rem 2rem;
 }
 @media screen and (max-width: 750px) {
@@ -64,10 +87,19 @@ body {
 .counter {
   width: 68.8rem;
   height: 31.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
@@ -79,10 +111,19 @@ body {
 .counter__headline {
   height: 13.3rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (max-width: 750px) {
   .counter__headline {
@@ -117,10 +158,19 @@ body {
 .counter__counter-top {
   height: 15rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 750px) {
   .counter__counter-top {
@@ -133,8 +183,10 @@ body {
   position: relative;
   background-color: black;
   border-radius: 1rem;
-  perspective: 300px;
-  perspective-origin: bottom;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  -webkit-perspective-origin: bottom;
+          perspective-origin: bottom;
 }
 @media screen and (max-width: 750px) {
   .counter__counter-top-FLIP {
@@ -148,8 +200,11 @@ body {
   position: absolute;
   top: 0;
   border-radius: 1rem 1rem 0 0;
-  transform-style: preserve-3d;
-  transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
 }
 @media screen and (max-width: 750px) {
   .counter__counter-top-FLIP-TOP {
@@ -177,9 +232,11 @@ body {
   overflow: hidden;
   position: absolute;
   text-align: center;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   border-radius: 1rem 1rem 0 0;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   z-index: 3;
 }
 .counter__counter-top-FLIP-TOP-FACE-BACK {
@@ -189,10 +246,13 @@ body {
   position: absolute;
   overflow: hidden;
   text-align: center;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   border-radius: 0 0 1rem 1rem;
-  transform: rotateZ(180deg) rotateY(180deg);
-  backface-visibility: hidden;
+  -webkit-transform: rotateZ(180deg) rotateY(180deg);
+          transform: rotateZ(180deg) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .counter__counter-top-FLIP-BTM {
   height: 7rem;
@@ -201,7 +261,8 @@ body {
   bottom: 1rem;
   border-radius: 0 0 1rem 1rem;
   overflow: hidden;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   z-index: -2;
 }
 @media screen and (max-width: 750px) {
@@ -219,7 +280,8 @@ body {
   top: 0;
   text-align: center;
   overflow: hidden;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .counter__counter-top-DIVIDER {
   height: 100%;
@@ -235,7 +297,9 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-70%) translateX(-50%);
+  -webkit-transform: translateY(-70%) translateX(-50%);
+      -ms-transform: translateY(-70%) translateX(-50%);
+          transform: translateY(-70%) translateX(-50%);
   background-color: var(--very-dark-black-blue);
 }
 @media screen and (max-width: 750px) {
@@ -251,7 +315,9 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-70%) translateX(50%);
+  -webkit-transform: translateY(-70%) translateX(50%);
+      -ms-transform: translateY(-70%) translateX(50%);
+          transform: translateY(-70%) translateX(50%);
   background-color: var(--very-dark-black-blue);
 }
 @media screen and (max-width: 750px) {
@@ -275,10 +341,19 @@ body {
 .counter__counter-btm {
   height: 3.4rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .counter__counter-btm-DISPLAY {
   width: 14.8rem;
@@ -306,7 +381,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media screen and (max-width: 750px) {
   .counter__counter-NUMBER-TOP {
@@ -325,7 +402,9 @@ body {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @media screen and (max-width: 750px) {
   .counter__counter-NUMBER-BTM {
@@ -336,9 +415,15 @@ body {
 }
 
 .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 13.6rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .socials svg {
@@ -350,22 +435,42 @@ body {
 }
 
 .FLIP {
-  animation-name: flip;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: flip;
+          animation-name: flip;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
 }
 
 @keyframes flip {
   0% {
-    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
   50% {
-    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
   }
   100% {
-    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
   }
 }
-
-/*# sourceMappingURL=style.css.map */

@@ -28,7 +28,7 @@ const seconds = {
 }
 const names = [days, hours, minutes, seconds];
 
-const launchDate = Date.parse('February 1, 2021 09:00:00:00');
+const launchDate = Date.parse('February 1, 2021 09:00:00');
 
 setInterval(() => {
     display(current(launchDate), current(launchDate - 1000))

@@ -48,6 +48,10 @@ body {
         background-size: auto;
     }
 
+    @media screen and (min-width: 1440px) {
+        background-size: contain; 
+    }
+
 }
 
 .body {
